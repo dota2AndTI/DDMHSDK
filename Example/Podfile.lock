@@ -1,0 +1,27 @@
+PODS:
+  - DDSDK (0.1.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - DDSDK (from `../`)
+  - FBSnapshotTestCase
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  DDSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DDSDK: 2be3c37fc593b4e82bdfbd18075946c1d0dbd738
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+
+PODFILE CHECKSUM: 6af3ddd1c4b09bfc76dc4176f396d433097e01e0
+
+COCOAPODS: 1.10.2

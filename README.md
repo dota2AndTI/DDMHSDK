@@ -1,6 +1,6 @@
 # DDSDK
 
-[![CI Status](https://img.shields.io/travis/az/DDSDK.svg?style=flat)](https://travis-ci.org/az/DDSDK)
+[![CI Status](https://img.shields.io/travis/dota2AndTI/DDSDK.svg?style=flat)](https://travis-ci.org/dota2AndTI/DDSDK)
 [![Version](https://img.shields.io/cocoapods/v/DDSDK.svg?style=flat)](https://cocoapods.org/pods/DDSDK)
 [![License](https://img.shields.io/cocoapods/l/DDSDK.svg?style=flat)](https://cocoapods.org/pods/DDSDK)
 [![Platform](https://img.shields.io/cocoapods/p/DDSDK.svg?style=flat)](https://cocoapods.org/pods/DDSDK)
@@ -22,7 +22,7 @@ pod 'DDSDK'
 
 ## Author
 
-az, 706530573@qq.com
+dota2AndTI, 706530573@qq.com
 
 ## License
 

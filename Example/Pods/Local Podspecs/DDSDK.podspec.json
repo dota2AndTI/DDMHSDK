@@ -1,0 +1,22 @@
+{
+  "name": "DDSDK",
+  "version": "0.1.0",
+  "summary": "A short description of DDSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/az/DDSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "az": "706530573@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/az/DDSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "DDSDK/Classes/**/*"
+}

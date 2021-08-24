@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/az/DDSDK'
+  s.homepage         = 'https://github.com/dota2AndTI/DDSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'az' => '706530573@qq.com' }
-  s.source           = { :git => 'https://github.com/az/DDSDK.git', :tag => s.version.to_s }
+  s.author           = { 'dota2AndTI' => '706530573@qq.com' }
+  s.source           = { :git => 'https://github.com/dota2AndTI/DDSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
