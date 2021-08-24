@@ -1,0 +1,1 @@
+../../../../../DDSDK/Google/Ads_GADSplashAdManager.h

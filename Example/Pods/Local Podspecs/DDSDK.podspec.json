@@ -3,20 +3,61 @@
   "version": "0.1.0",
   "summary": "A short description of DDSDK.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/az/DDSDK",
+  "homepage": "https://github.com/dota2AndTI/DDSDK",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "az": "706530573@qq.com"
+    "dota2AndTI": "706530573@qq.com"
   },
   "source": {
-    "git": "https://github.com/az/DDSDK.git",
+    "git": "https://github.com/dota2AndTI/DDSDK.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "DDSDK/Classes/**/*"
+  "subspecs": [
+    {
+      "name": "Common",
+      "source_files": "DDSDK/Common/*.{h,m}",
+      "dependencies": {
+        "Ads-CN": [
+
+        ]
+      },
+      "vendored_frameworks": "DDSDK/Common/ABUAdSDK.framework"
+    },
+    {
+      "name": "Google",
+      "source_files": "DDSDK/Google/*.{h,m}",
+      "dependencies": {
+        "Google-Mobile-Ads-SDK": [
+          "8.8.0"
+        ],
+        "DDSDK/Common": [
+
+        ]
+      }
+    },
+    {
+      "name": "ABU",
+      "source_files": "DDSDK/ABU/*.{h,m}",
+      "dependencies": {
+        "DDSDK/Common": [
+
+        ]
+      }
+    },
+    {
+      "name": "BU",
+      "source_files": "DDSDK/BU/*.{h,m}",
+      "dependencies": {
+        "DDSDK/Common": [
+
+        ]
+      }
+    }
+  ]
 }

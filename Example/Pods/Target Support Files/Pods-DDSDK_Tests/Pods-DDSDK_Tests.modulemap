@@ -1,4 +1,4 @@
-framework module Pods_DDSDK_Tests {
+module Pods_DDSDK_Tests {
   umbrella header "Pods-DDSDK_Tests-umbrella.h"
 
   export *
