@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'DDSDK/Classes/**/*'
+  s.source_files = 'DDSDK/advertisement/**/*'
   
   # s.resource_bundles = {
   #   'DDSDK' => ['DDSDK/Assets/*.png']
@@ -39,4 +39,6 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'Google-Mobile-Ads-SDK','=8.8.0'
+  s.dependency 'Ads-CN'
 end

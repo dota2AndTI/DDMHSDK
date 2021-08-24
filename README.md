@@ -24,6 +24,8 @@ pod 'DDSDK'
 
 dota2AndTI, 706530573@qq.com
 
+// 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 git token 
+
 ## License
 
 DDSDK is available under the MIT license. See the LICENSE file for more info.
