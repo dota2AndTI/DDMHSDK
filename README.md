@@ -1,2 +1,2 @@
-# DDMHSDK
+# DDSDK
 广告SDK
