@@ -10,6 +10,7 @@
 
 #import "ABUAdSDKDefines.h"
 #import "ABUUserInfoForSegment.h"
+#import "ABUPrivacyConfig.h"
 
 /// ABUAdSDKManager
 @interface ABUAdSDKManager : NSObject
@@ -27,8 +28,8 @@
 /// Must obtain the consent of the user before incoming
 + (void)setIsPaidApp:(BOOL)isPaidApp;
 
-/// extra device data for ABUAdSDK.Must be called before interface "setAppID"!Not required for every developer.Please make sure that it is called only when needed,Now the supported fields are "publisher_did".The incoming format is an dictionary of json strings,eg:"[{\"publisher_did\":\"62271333038\"}"
-/// @param extraDeviceStr  eg:@"[{\"publisher_did\":\"62271333038\"}]"
+/// extra device data for ABUAdSDK.Must be called before interface "setAppID"!Not required for every developer.Please make sure that it is called only when needed,Now the supported fields are "device_id"(Conventional dedicated fields) and other custom keys.The incoming format is an dictionary of json strings,eg:"[{\"device_id\":\"62271333038\"}"
+/// @param extraDeviceStr  eg:@"[{\"device_id\":\"62271333038\"}]"
 + (void)setExtDeviceData:(NSString *)extraDeviceStr;
 
 /// Configure development mode.
@@ -57,5 +58,6 @@
 
 /// current theme mode
 + (ABUAdSDKThemeStatus)themeStatus;
+
 
 @end

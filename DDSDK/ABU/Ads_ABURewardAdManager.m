@@ -55,12 +55,14 @@
     }
 }
 
+-(BOOL)ads_getRewardStatus {
+    return self.isGetReward;
+}
+
 
 #pragma mark - ABURewardedVideoAdDelegate
 - (void)rewardedVideoAdDidLoad:(ABURewardedVideoAd *_Nonnull)rewardedVideoAd {
     NSLog(@"log-%s",__func__);
-    // 不能放在load里面show展示广告了
-    // 需要放在download video
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_abuLoadSuccess:)]) {
         [self.delegate ads_abuLoadSuccess:self];
     }
@@ -121,7 +123,9 @@
  */
 - (void)rewardedVideoAdDidVisible:(ABURewardedVideoAd *_Nonnull)rewardedVideoAd {
     NSLog(@"%s", __func__);
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_abuRewardedDidVisible:)]) {
+        [self.delegate ads_abuRewardedDidVisible:self];
+    }
 }
 
 /**

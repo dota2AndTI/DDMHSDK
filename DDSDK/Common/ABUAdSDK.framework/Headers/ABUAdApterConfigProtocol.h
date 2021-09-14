@@ -24,6 +24,9 @@
 /// config adn SDK
 + (void)configAdSDK:(ABUAdSdkConfig *_Nullable)initConfig;
 
+/// config adn Privacy.The key for privacyConfig see ABUPrivacyConfig.h
++ (void)configAdPrivacyConfig:(NSDictionary *_Nonnull)privacyConfig;
+
 /// adn can be use
 + (BOOL)isAdnCanUse;
 

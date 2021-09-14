@@ -23,6 +23,13 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		80843FE546228C8F739862B6 /* libPods-DDSDK_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F79844EE05DA0FFDA3C3C5 /* libPods-DDSDK_Tests.a */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		8C84568426F03B59006E1F21 /* ABUAdGdtAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C84568126F03B58006E1F21 /* ABUAdGdtAdapter.framework */; };
+		8C84568526F03B59006E1F21 /* ABUAdSDKAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C84568226F03B58006E1F21 /* ABUAdSDKAdapter.framework */; };
+		8C84568626F03B59006E1F21 /* ABUAdAdmobAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C84568326F03B59006E1F21 /* ABUAdAdmobAdapter.framework */; };
+		8C84569026F03BB5006E1F21 /* AdsLaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C84568826F03BB2006E1F21 /* AdsLaunchViewController.m */; };
+		8C84569126F03BB5006E1F21 /* Ads_BUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C84568926F03BB2006E1F21 /* Ads_BUViewController.m */; };
+		8C84569226F03BB5006E1F21 /* Ads_AggregationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C84568B26F03BB3006E1F21 /* Ads_AggregationViewController.m */; };
+		8C84569326F03BB5006E1F21 /* Ads_GoolgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C84568E26F03BB4006E1F21 /* Ads_GoolgeViewController.m */; };
 		AC6A1D88E8BFB77AC2841C69 /* libPods-DDSDK_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F1D7D659ABB9327D7AED61 /* libPods-DDSDK_Example.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +72,18 @@
 		6FCBBA6BD948195E20A2E8D5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C84568126F03B58006E1F21 /* ABUAdGdtAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABUAdGdtAdapter.framework; sourceTree = "<group>"; };
+		8C84568226F03B58006E1F21 /* ABUAdSDKAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABUAdSDKAdapter.framework; sourceTree = "<group>"; };
+		8C84568326F03B59006E1F21 /* ABUAdAdmobAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ABUAdAdmobAdapter.framework; sourceTree = "<group>"; };
+		8C84568826F03BB2006E1F21 /* AdsLaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdsLaunchViewController.m; sourceTree = "<group>"; };
+		8C84568926F03BB2006E1F21 /* Ads_BUViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ads_BUViewController.m; sourceTree = "<group>"; };
+		8C84568A26F03BB3006E1F21 /* Ads_BUViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads_BUViewController.h; sourceTree = "<group>"; };
+		8C84568B26F03BB3006E1F21 /* Ads_AggregationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ads_AggregationViewController.m; sourceTree = "<group>"; };
+		8C84568C26F03BB3006E1F21 /* AdsLaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdsLaunchViewController.h; sourceTree = "<group>"; };
+		8C84568D26F03BB4006E1F21 /* Ads_AggregationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads_AggregationViewController.h; sourceTree = "<group>"; };
+		8C84568E26F03BB4006E1F21 /* Ads_GoolgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ads_GoolgeViewController.m; sourceTree = "<group>"; };
+		8C84568F26F03BB5006E1F21 /* Ads_GoolgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ads_GoolgeViewController.h; sourceTree = "<group>"; };
+		8C84569826F03D58006E1F21 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B8C2A4E597ACF6F92F8E40FC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		C5F1D7D659ABB9327D7AED61 /* libPods-DDSDK_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DDSDK_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,7 +93,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C84568626F03B59006E1F21 /* ABUAdAdmobAdapter.framework in Frameworks */,
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				8C84568526F03B59006E1F21 /* ABUAdSDKAdapter.framework in Frameworks */,
+				8C84568426F03B59006E1F21 /* ABUAdGdtAdapter.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				AC6A1D88E8BFB77AC2841C69 /* libPods-DDSDK_Example.a in Frameworks */,
@@ -148,7 +170,10 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* DDViewController.h */,
 				6003F5A6195388D20070C39A /* DDViewController.m */,
+				8C84568726F03BA0006E1F21 /* RC */,
+				8C84568026F03B1E006E1F21 /* Frameworks */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				8C84569826F03D58006E1F21 /* PrefixHeader.pch */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -196,6 +221,31 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		8C84568026F03B1E006E1F21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C84568326F03B59006E1F21 /* ABUAdAdmobAdapter.framework */,
+				8C84568126F03B58006E1F21 /* ABUAdGdtAdapter.framework */,
+				8C84568226F03B58006E1F21 /* ABUAdSDKAdapter.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C84568726F03BA0006E1F21 /* RC */ = {
+			isa = PBXGroup;
+			children = (
+				8C84568D26F03BB4006E1F21 /* Ads_AggregationViewController.h */,
+				8C84568B26F03BB3006E1F21 /* Ads_AggregationViewController.m */,
+				8C84568A26F03BB3006E1F21 /* Ads_BUViewController.h */,
+				8C84568926F03BB2006E1F21 /* Ads_BUViewController.m */,
+				8C84568F26F03BB5006E1F21 /* Ads_GoolgeViewController.h */,
+				8C84568E26F03BB4006E1F21 /* Ads_GoolgeViewController.m */,
+				8C84568C26F03BB3006E1F21 /* AdsLaunchViewController.h */,
+				8C84568826F03BB2006E1F21 /* AdsLaunchViewController.m */,
+			);
+			path = RC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -207,7 +257,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				2D68F031F7FB16D22EFE5F2E /* [CP] Copy Pods Resources */,
+				0FA2729B89F674F75E3A2C63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -297,7 +347,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D68F031F7FB16D22EFE5F2E /* [CP] Copy Pods Resources */ = {
+		0FA2729B89F674F75E3A2C63 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,9 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C84569226F03BB5006E1F21 /* Ads_AggregationViewController.m in Sources */,
 				6003F59E195388D20070C39A /* DDAppDelegate.m in Sources */,
+				8C84569126F03BB5006E1F21 /* Ads_BUViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* DDViewController.m in Sources */,
+				8C84569026F03BB5006E1F21 /* AdsLaunchViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				8C84569326F03BB5006E1F21 /* Ads_GoolgeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +587,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/DDSDK\"",
+					"$(PROJECT_DIR)/DDSDK/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DDSDK/DDSDK-Prefix.pch";
@@ -557,6 +612,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/DDSDK\"",
+					"$(PROJECT_DIR)/DDSDK/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DDSDK/DDSDK-Prefix.pch";

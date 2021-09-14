@@ -12,15 +12,6 @@
 #import "ABUAdNetworkConnectorProtocol.h"
 #import "ABUAdUnit.h"
 
-// ade类型
-typedef NS_ENUM (NSInteger, ABUAdClassType) {
-    ABUAdClassTypeNative = 1,
-    ABUAdClassTypeRewardedVideo,
-    ABUAdClassTypeFullscreenVideo,
-    ABUAdClassTypeInterstitial,
-    ABUAdClassTypeSplash,
-    ABUAdClassTypeBanner,
-};
 
 /// 聚合广告基类
 @interface ABUBaseAggregationAd : NSObject

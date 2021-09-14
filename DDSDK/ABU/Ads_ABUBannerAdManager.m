@@ -76,6 +76,21 @@
     }
 }
 
+- (void)bannerAdDidBecomVisible:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
+    <#code#>
+}
+
+
+- (void)bannerAdWillDismissFullScreenModal:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
+    <#code#>
+}
+
+
+- (void)bannerAdWillPresentFullScreenModal:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
+    <#code#>
+}
+
+
 
 
 

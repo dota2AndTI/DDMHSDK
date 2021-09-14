@@ -11,6 +11,7 @@
 
 #import "ABUAdUnit.h"
 #import "ABURewardedVideoModel.h"
+#import "ABUAdSDKDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) CGSize adSize;
 @property (nonatomic, assign) BOOL IsSupportDeepLink;
 @property (nonatomic, assign) NSInteger autoRefreshTime;    // banner刷新时间
-@property (nonatomic, copy) NSString *userdataForM2Pangle;    // M传给穿山甲的userdata，请求粒度的设置
+@property (nonatomic, copy) NSDictionary *userdataForM2PangleMap;    // M传给穿山甲的userdata数据，请求粒度的设置
 
 // For  nativeAd
 @property (nonatomic, assign) NSInteger nativeAdLoadCount;
@@ -37,6 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger tolerateTimeout;    // 开屏超时时间
 /// Whether to open the splash video zoomout function if adn AdSDK supported.Now BUAdSDK(zoomoutView), GDTAdSDK(Video V+), and KSAdSDK(MiniWindow) are supported.
 @property (nonatomic, assign) BOOL needZoomOutIfCan;
+/// optional. Config the behaviour of click splash view.Deafult value is ABUSplashButtonTypeFullScreen.Now only valid for pangle adn.
+@property (nonatomic, assign) ABUSplashButtonType splashButtonType;
 
 // For server bidding ad
 @property (atomic, copy) NSString *adm; // 来自服务端Bidding的广告物料，只有server bidding情况下回有值

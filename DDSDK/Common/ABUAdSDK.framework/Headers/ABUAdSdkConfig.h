@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ABUAdSdkConfig : NSObject
 
-@property (nonatomic, copy) NSString *publisherDidStr; // 用于第三方的did传递给穿山甲(目前用于Ohayoo)
+@property (nonatomic, copy) NSDictionary *publisherDidMap; // 用于第三方的did传递给穿山甲(目前用于Ohayoo)
 @property (nonatomic, assign) ABUAdSDKThemeStatus themeStatus;  // 主题模式
 
 @end

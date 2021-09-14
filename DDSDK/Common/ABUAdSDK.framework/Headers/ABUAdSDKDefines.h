@@ -75,6 +75,23 @@ typedef NS_ENUM (NSInteger, ABUAdnType) {
     ABUAdnKlevin = 9,   // Klevin游可赢
 };
 
+// 广告类类型
+typedef NS_ENUM (NSInteger, ABUAdClassType) {
+    ABUAdClassTypeNative = 1,
+    ABUAdClassTypeRewardedVideo,
+    ABUAdClassTypeFullscreenVideo,
+    ABUAdClassTypeInterstitial,
+    ABUAdClassTypeSplash,
+    ABUAdClassTypeBanner,
+};
+
+// 开屏点击区域类型
+typedef NS_ENUM(NSInteger, ABUSplashButtonType) {
+  ABUSplashButtonTypeFullScreen = 1, // The whole area of splash view will respond to click event
+  ABUSplashButtonTypeDownloadBar = 2  // The area of download bar in splash view will respond to click event
+};
+
+
 @protocol ABUToDictionary <NSObject>
 - (NSDictionary *)dictionaryValue;
 @end

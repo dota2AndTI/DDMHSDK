@@ -15,6 +15,7 @@
 
 /// ABUSplashAd
 @interface ABUSplashAd : ABUBaseAggregationAd
+
 /// The unique identifier of splash ad.
 @property (nonatomic, copy, readonly, nonnull) NSString *adUnitID;
 
@@ -38,6 +39,9 @@
 
 /// Whether to open the splash video zoomout function if adn AdSDK supported.Now BUAdSDK(zoomoutView), GDTAdSDK(Video V+) are supported.
 @property (nonatomic, assign) BOOL needZoomOutIfCan;
+
+/// optional. Config the behaviour of click splash view.Deafult value is ABUSplashButtonTypeFullScreen.Now only valid for pangle adn.
+@property (nonatomic, assign) ABUSplashButtonType splashButtonType;
 
 ///  When the ad hits the zoom out advertisement, it has value. Now BUAdSDK(zoomoutView), GDTAdSDK(Video V+) are supported.
 @property (nonatomic, strong, readonly) ABUSplashZoomOutView * _Nullable zoomOutView;

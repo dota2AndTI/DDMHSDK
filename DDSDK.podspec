@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of DDSDK.'
   
   # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'Common' do |ss|
     ss.source_files = 'DDSDK/Common/*.{h,m}'
-    ss.dependency 'Ads-CN'
+    ss.dependency 'Ads-CN','3.8.1.0'
     ss.vendored_frameworks = 'DDSDK/Common/ABUAdSDK.framework'
   end
   s.subspec 'Google' do |ss|
@@ -44,6 +44,7 @@ Pod::Spec.new do |s|
   s.subspec 'ABU' do |ss|
     ss.source_files = 'DDSDK/ABU/*.{h,m}'
     ss.dependency 'DDSDK/Common'
+    
   end
   s.subspec 'BU' do |ss|
     ss.source_files = 'DDSDK/BU/*.{h,m}'

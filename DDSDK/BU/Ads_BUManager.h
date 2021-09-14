@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 //视频的代理
 -(void)ads_buManager:(Ads_BUManager *)manager videoPlayFinishCloseWith:(NSString *)soltId;
 -(void)ads_buManager:(Ads_BUManager *)manager videoSkipWith:(NSString *)soltId;
+-(void)ads_buManager:(Ads_BUManager *)manager videoLoadFailed:(NSError *)error;
+-(void)ads_buManager:(Ads_BUManager *)manager videoRenderFailed:(NSError *)error;
+-(void)ads_buVideoLoadSuccessManager:(Ads_BUManager *)manager;
+-(void)ads_buVideoRenderSuccessManager:(Ads_BUManager *)manager;
 // 插屏广告
 -(void)ads_buManager:(Ads_BUManager *)manager interstitialClosedWith:(NSString *)soltId;
 //信息流广告

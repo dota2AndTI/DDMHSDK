@@ -6,18 +6,18 @@ PODS:
     - Ads-CN/Domestic
   - Ads-CN/BUFoundation (3.8.1.0)
   - Ads-CN/Domestic (3.8.1.0)
-  - DDSDK (0.1.0):
-    - DDSDK/ABU (= 0.1.0)
-    - DDSDK/BU (= 0.1.0)
-    - DDSDK/Common (= 0.1.0)
-    - DDSDK/Google (= 0.1.0)
-  - DDSDK/ABU (0.1.0):
+  - DDSDK (0.1.1):
+    - DDSDK/ABU (= 0.1.1)
+    - DDSDK/BU (= 0.1.1)
+    - DDSDK/Common (= 0.1.1)
+    - DDSDK/Google (= 0.1.1)
+  - DDSDK/ABU (0.1.1):
     - DDSDK/Common
-  - DDSDK/BU (0.1.0):
+  - DDSDK/BU (0.1.1):
     - DDSDK/Common
-  - DDSDK/Common (0.1.0):
-    - Ads-CN
-  - DDSDK/Google (0.1.0):
+  - DDSDK/Common (0.1.1):
+    - Ads-CN (= 3.8.1.0)
+  - DDSDK/Google (0.1.1):
     - DDSDK/Common
     - Google-Mobile-Ads-SDK (= 8.8.0)
   - FBSnapshotTestCase (2.1.4):
@@ -87,7 +87,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Ads-CN: 49af96ac9f7b1a43ef4cfb37b6a74863421d4ee1
-  DDSDK: be075680315ed3be0b33f36a176cf1b5ca6f8f0d
+  DDSDK: bf74fac3de348b12087b5fcea3d87392655587d0
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Google-Mobile-Ads-SDK: 1fccd8fd76aca1cef9bfe0711124c9731dad9307
   GoogleAppMeasurement: 2c0c6e2a7ab3fe730ade6379f732bdefb46f50b0

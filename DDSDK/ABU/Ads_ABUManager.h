@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)ads_abuRewardDidSkip:(Ads_ABUManager*)manager;
 -(void)ads_abuRewardPlayFinished:(Ads_ABUManager*)manager error:(NSError *)error;
 -(void)ads_abuRewardShowFailed:(Ads_ABUManager*)manager;
+-(void)ads_abuRewardedDidVisible:(Ads_ABUManager*)manager;
 // fullReward
 -(void)ads_abuFullVideoDidSkip:(Ads_ABUManager*)manager;
 -(void)ads_abuFullVideoShowFailed:(Ads_ABUManager*)manager error:(NSError *)error;
