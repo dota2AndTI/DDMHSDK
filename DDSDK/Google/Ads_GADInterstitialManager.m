@@ -51,6 +51,9 @@
 - (void)ad:(nonnull id<GADFullScreenPresentingAd>)ad
 didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
     NSLog(@"Ad did fail to present full screen content.");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadInterstitialShowFailed:error:)]) {
+        [self.delegate ads_gadInterstitialShowFailed:self error:error];
+    }
 }
 
 - (void)adDidPresentFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
@@ -59,8 +62,8 @@ didFailToPresentFullScreenContentWithError:(nonnull NSError *)error {
 
 - (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
    NSLog(@"Ad did dismiss full screen content.");
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadLoadClosedWithManager:)]) {
-        [self.delegate ads_gadLoadClosedWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadClosedWithManager:)]) {
+        [self.delegate ads_gadClosedWithManager:self];
     }
 }
 

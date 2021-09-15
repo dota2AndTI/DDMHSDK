@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ads_showVideoWithSlotID:(NSString *)slotID userId:(NSString *)userId;
 
+-(BOOL)ads_isGetRewarded;
+
 @end
 
 NS_ASSUME_NONNULL_END

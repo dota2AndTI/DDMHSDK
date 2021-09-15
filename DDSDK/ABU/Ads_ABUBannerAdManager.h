@@ -17,6 +17,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ads_abuCloseBannerAdWithSlotID:(NSString *)slotID;
 
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated;
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

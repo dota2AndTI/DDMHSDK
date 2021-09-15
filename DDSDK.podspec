@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'DDSDK'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of DDSDK.'
   
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dota2AndTI' => '706530573@qq.com' }
   s.source           = { :git => 'https://github.com/dota2AndTI/DDSDK.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>' 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
   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
   
   s.ios.deployment_target = '9.0'

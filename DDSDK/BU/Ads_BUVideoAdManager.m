@@ -38,9 +38,16 @@
     }
 }
 
+-(BOOL)ads_isGetRewarded {
+    return self.playFinish;
+}
+
 #pragma mark - BUNativeExpressRewardedVideoAdDelegate
 // 广告素材物料加载成功
 -(void)nativeExpressRewardedVideoAdDidLoad:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadSuccessWithManager:)]) {
+        [self.delegate ads_buLoadSuccessWithManager:self];
+    }
     if ([rewardedVideoAd isEqual:self.buRewardedAd]) {
         if (self.isVideoImmediately) {
             [rewardedVideoAd showAdFromRootViewController:self.currentVC];
@@ -49,34 +56,32 @@
         }
     }
 }
+
+// 返回的错误码(error)表示广告加载失败的原因，
+-(void)nativeExpressRewardedVideoAd:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadFailedWithManager:error:)]) {
+        [self.delegate ads_buLoadFailedWithManager:self error:error];
+    }
+}
+
 //渲染失败，网络原因或者硬件原因导致渲染失败,可以更换手机或者网络环境测试。建议升级到穿山甲平台最新版本
 -(void)nativeExpressRewardedVideoAdViewRenderFail:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd error:(NSError *)error {
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buManager:videoRenderFailed:)]) {
         [self.delegate ads_buManager:self videoRenderFailed:error];
     }
 }
+
 // 渲染成功回调。3100之后版本SDK，广告展示之后才会回调
 -(void)nativeExpressRewardedVideoAdViewRenderSuccess:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd {
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buVideoRenderSuccessManager:)]) {
         [self.delegate ads_buVideoRenderSuccessManager:self];
     }
 }
-// 返回的错误码(error)表示广告加载失败的原因，
--(void)nativeExpressRewardedVideoAd:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd didFailWithError:(NSError *)error {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buManager:videoLoadFailed:)]) {
-        [self.delegate ads_buManager:self videoLoadFailed:error];
-    }
-}
+
 //用户关闭广告时会触发此回调，注意：任何广告的关闭操作必须用户主动触发;
 -(void)nativeExpressRewardedVideoAdDidClose:(BUNativeExpressRewardedVideoAd *)rewardedVideoAd {
-    if (self.playFinish) {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buManager:videoPlayFinishCloseWith:)]) {
-            [self.delegate ads_buManager:self videoPlayFinishCloseWith:@""];
-        }
-    }else {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buManager:videoSkipWith:)]) {
-            [self.delegate ads_buManager:self videoSkipWith:@""];
-        }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buClosedWithManager:)]) {
+        [self.delegate ads_buClosedWithManager:self];
     }
 }
 // 点击回调方法

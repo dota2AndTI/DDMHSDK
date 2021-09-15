@@ -56,8 +56,8 @@
 
 - (void)adDidDismissFullScreenContent:(nonnull id<GADFullScreenPresentingAd>)ad {
   NSLog(@"adDidDismissFullScreenContent");
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadLoadFailedWithManager:)]) {
-        [self.delegate ads_gadLoadClosedWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadClosedWithManager:)]) {
+        [self.delegate ads_gadClosedWithManager:self];
     }
 }
 

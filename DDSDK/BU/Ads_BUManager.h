@@ -16,22 +16,22 @@ NS_ASSUME_NONNULL_BEGIN
 //视频的代理
 -(void)ads_buManager:(Ads_BUManager *)manager videoPlayFinishCloseWith:(NSString *)soltId;
 -(void)ads_buManager:(Ads_BUManager *)manager videoSkipWith:(NSString *)soltId;
--(void)ads_buManager:(Ads_BUManager *)manager videoLoadFailed:(NSError *)error;
 -(void)ads_buManager:(Ads_BUManager *)manager videoRenderFailed:(NSError *)error;
--(void)ads_buVideoLoadSuccessManager:(Ads_BUManager *)manager;
 -(void)ads_buVideoRenderSuccessManager:(Ads_BUManager *)manager;
+
 // 插屏广告
 -(void)ads_buManager:(Ads_BUManager *)manager interstitialClosedWith:(NSString *)soltId;
+
 //信息流广告
 -(void)ads_buManager:(Ads_BUManager *)manager expressLoadSuccess:(NSArray<__kindof BUNativeExpressAdView *> *)views;
 -(void)ads_buManager:(Ads_BUManager *)manager expressLoadFailed:(NSError *)error;
 -(void)ads_buManager:(Ads_BUManager *)manager expressDislikeWithView:(BUNativeExpressAdView *)expressAdView;
-//-(void)ads_buExpressRemovedWithManager:(Ads_BUManager *)manager;
 //开屏广告
--(void)ads_buSplashLoadSuccessWithManager:(Ads_BUManager *)manager;
--(void)ads_buSplashLoadFailedWithManager:(Ads_BUManager *)manager;
--(void)ads_buSplashLoadClosedWithManager:(Ads_BUManager *)manager;
 
+//Common
+-(void)ads_buLoadSuccessWithManager:(Ads_BUManager *)manager;
+-(void)ads_buLoadFailedWithManager:(Ads_BUManager *)manager error:(NSError *)error;;
+-(void)ads_buClosedWithManager:(Ads_BUManager *)manager;
 
 @end
 

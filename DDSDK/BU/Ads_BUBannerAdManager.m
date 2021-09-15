@@ -12,6 +12,9 @@
 @property (nonatomic,strong)BUNativeExpressBannerView *buBannerView;
 @property (nonatomic,assign)BOOL buBannerAdLoaded;// yes:加载成功 no: 加载失败
 @property (nonatomic,assign)BOOL isBannerImmediately;
+@property (nonatomic,assign)BOOL isShowed;
+
+@property (nonatomic,assign)BOOL isAddedView;//广告已被加入视图
 
 @end
 
@@ -28,6 +31,8 @@
 
 -(void)ads_showBannerAdWithSlotID:(NSString *)slotID {
     if (self.buBannerAdLoaded) {
+        self.isShowed = YES;
+        self.isAddedView = YES;
         [self.currentVC.view addSubview:self.buBannerView];
     }
 }
@@ -37,11 +42,25 @@
     self.buBannerView = nil;
 }
 
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated {
+    if (!self.isShowed && self.isAddedView) {
+        [self.currentVC.view addSubview:self.buBannerView];
+    }
+}
+
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated {
+    if (self.isShowed) {
+        self.isShowed = NO;
+        [self.buBannerView removeFromSuperview];
+    }
+}
+
 #pragma mark - BUNativeExpressBannerViewDelegate
 // 加载成功
 -(void)nativeExpressBannerAdViewDidLoad:(BUNativeExpressBannerView *)bannerAdView {
     if ([bannerAdView isEqual:self.buBannerView]) {
         if (self.isBannerImmediately ) {
+            self.isAddedView = YES;
             [self.currentVC.view addSubview:bannerAdView];
         }else{
             self.buBannerAdLoaded = YES;

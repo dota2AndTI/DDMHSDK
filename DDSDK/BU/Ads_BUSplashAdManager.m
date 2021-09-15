@@ -36,15 +36,15 @@
 #pragma mark - BUSplashAdDelegate
 -(void)splashAdDidLoad:(BUSplashAdView *)splashAd {
     NSLog(@"穿山甲 开屏广告请求成功");
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buSplashLoadSuccessWithManager:)]) {
-        [self.delegate ads_buSplashLoadSuccessWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadSuccessWithManager:)]) {
+        [self.delegate ads_buLoadSuccessWithManager:self];
     }
 }
 //请求失败的回调
 -(void)splashAd:(BUSplashAdView *)splashAd didFailWithError:(NSError *)error {
     NSLog(@"穿山甲 开屏广告请求失败->%@",error);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buSplashLoadFailedWithManager:)]) {
-        [self.delegate ads_buSplashLoadFailedWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadFailedWithManager:error:)]) {
+        [self.delegate ads_buLoadFailedWithManager:self error:error];
     }
 }
 
@@ -53,14 +53,14 @@
 }
 // 用户点击跳过按钮时会触发此回调，可在此回调方法中处理用户点击跳转后的相关逻辑
 -(void)splashAdDidClickSkip:(BUSplashAdView *)splashAd {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buSplashLoadClosedWithManager:)]) {
-        [self.delegate ads_buSplashLoadClosedWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buClosedWithManager:)]) {
+        [self.delegate ads_buClosedWithManager:self];
     }
 }
 //SDK渲染开屏广告关闭回调，当用户点击广告时会直接触发此回调，建议在此回调方法中直接进行广告对象的移除操作
 -(void)splashAdDidClose:(BUSplashAdView *)splashAd {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buSplashLoadClosedWithManager:)]) {
-        [self.delegate ads_buSplashLoadClosedWithManager:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buClosedWithManager:)]) {
+        [self.delegate ads_buClosedWithManager:self];
     }
 }
 // 倒计时为0时会触发此回调，如果客户端使用了此回调方法，建议在此回调方法中进行广告的移除操作

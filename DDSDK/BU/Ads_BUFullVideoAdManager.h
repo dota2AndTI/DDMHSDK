@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ads_requestFullAdsWithSlotID:(NSString *)slotID currentVC:(UIViewController *)vc immediatelyShow:(BOOL) isImmediately;
 -(void)ads_showFullAdsWithSlotID:(NSString *)slotID;
-
+-(BOOL)ads_isGetRewarded;
 @end
 
 NS_ASSUME_NONNULL_END

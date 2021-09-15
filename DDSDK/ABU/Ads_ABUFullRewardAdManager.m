@@ -10,7 +10,7 @@
 @interface Ads_ABUFullRewardAdManager ()<ABUFullscreenVideoAdDelegate>
 
 @property (nonatomic,strong)ABUFullscreenVideoAd *fullVideoAd;
-
+@property (nonatomic,assign)BOOL playFinish;
 @end
 
 @implementation Ads_ABUFullRewardAdManager
@@ -32,6 +32,10 @@
             SDKLog(@"聚合 全屏视频广告未能展示出来");
         }
     }
+}
+
+-(BOOL)ads_getRewardStatus {
+    return self.playFinish;
 }
 
 #pragma mark - ABUFullscreenVideoAdDelegate
@@ -88,6 +92,9 @@
 }
 
 - (void)fullscreenVideoAdDidPlayFinish:(ABUFullscreenVideoAd * _Nonnull)fullscreenVideoAd didFailWithError:(NSError *_Nullable)error {
+    if (!error) {
+        self.playFinish = YES;
+    }
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_abuRewardPlayFinished:error:)]) {
         [self.delegate ads_abuRewardPlayFinished:self error:error];
     }

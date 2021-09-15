@@ -14,8 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)ads_requestBannaerAdWitSlotID:(NSString *)slotID adFrame:(CGRect)frame interval:(NSInteger)interval currentVC:(UIViewController *)vc immediatelyShow:(BOOL)isImmediately;
 
 -(void)ads_showBannerAdWithSlotID:(NSString *)slotID;
-
 -(void)ads_closeBannerAdWithSlotID:(NSString *)slotID;
+
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated;
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated;
 
 @end
 

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 //激励广告
 -(void)ads_gadRewardDidSkipWithManager:(Ads_GADManager *)manager;
 -(void)ads_gadRewardPlayFinished:(Ads_GADManager*)manager;
--(void)ads_gadRewardShowFailed:(Ads_GADManager*)manager;
+-(void)ads_gadRewardShowFailed:(Ads_GADManager*)manager error:(NSError *)error;
 //全屏视频广告
 -(void)ads_gadFullVideoDidSkip:(Ads_GADManager*)manager;
 -(void)ads_gadFullVideoShowFailed:(Ads_GADManager*)manager error:(NSError *)error;
@@ -27,9 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 // banner
 
 // 开屏广告
+
+//Common
 -(void)ads_gadLoadSuccessWithManager:(Ads_GADManager *)manager;
 -(void)ads_gadLoadFailedWithManager:(Ads_GADManager *)manager;
--(void)ads_gadLoadClosedWithManager:(Ads_GADManager *)manager;
+-(void)ads_gadClosedWithManager:(Ads_GADManager *)manager;
 
 @end
 

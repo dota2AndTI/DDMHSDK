@@ -65,6 +65,9 @@
 
 - (void)splashAdDidShowFailed:(ABUSplashAd *_Nonnull)splashAd error:(NSError *)error {
     SDKLog(@"%s-聚合启动广告展示失败->%@",__func__,error);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_abuSplashShowFailed:error:)]) {
+        [self.delegate ads_abuSplashShowFailed:self error:error];
+    }
 }
 
 - (void)splashAdDidClose:(ABUSplashAd *_Nonnull)splashAd {

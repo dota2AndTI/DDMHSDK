@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ads_abuShowFullVideoAdWith:(NSString *)adId;
 
+-(BOOL)ads_getRewardStatus;
+
 @end
 
 NS_ASSUME_NONNULL_END

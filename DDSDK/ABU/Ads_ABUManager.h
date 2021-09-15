@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 // banner
 
 // splash
+-(void)ads_abuSplashShowFailed:(Ads_ABUManager*)manager error:(NSError *)error;
 
 //common
 -(void)ads_abuLoadFailed:(Ads_ABUManager*)manager error:(NSError *)error;

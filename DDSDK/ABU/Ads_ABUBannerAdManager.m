@@ -13,6 +13,7 @@
 @property (nonatomic,strong)UIView *bannerAdView;
 
 @property (nonatomic,assign)CGRect bannerFrame;
+@property (nonatomic,assign)BOOL isShowed;
 
 @end
 
@@ -30,12 +31,26 @@
 
 -(void)ads_abuShowBannerAdWithSlotID:(NSString *)slotID {
     if (self.bannerAdView && self.adLoadSuccess) {
+        self.isShowed = YES;
         [self.vc.view addSubview:self.bannerAdView];
     }
 }
 
 -(void)ads_abuCloseBannerAdWithSlotID:(NSString *)slotID {
     if (self.bannerAdView) {
+        [self.bannerAdView removeFromSuperview];
+    }
+}
+
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated {
+    if (!self.isShowed && self.bannerAdView) {
+        [self.vc.view addSubview:self.bannerAdView];
+    }
+}
+
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated {
+    if (self.isShowed && self.bannerAdView) {
+        self.isShowed = NO;
         [self.bannerAdView removeFromSuperview];
     }
 }
@@ -69,6 +84,10 @@
     }
 }
 
+- (void)bannerAdWillDismissFullScreenModal:(ABUBannerAd *_Nonnull)ABUBannerAd bannerView:(UIView *)bannerView {
+    
+}
+
 -(void)bannerAdDidClosed:(ABUBannerAd *)ABUBannerAd bannerView:(UIView *)bannerView dislikeWithReason:(NSArray<ABUDislikeWords *> *)filterwords {
     SDKLog(@"%s",__func__);
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_abuDidClosed:)]) {
@@ -77,17 +96,11 @@
 }
 
 - (void)bannerAdDidBecomVisible:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
-    <#code#>
+    
 }
-
-
-- (void)bannerAdWillDismissFullScreenModal:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
-    <#code#>
-}
-
 
 - (void)bannerAdWillPresentFullScreenModal:(ABUBannerAd * _Nonnull)ABUBannerAd bannerView:(nonnull UIView *)bannerView {
-    <#code#>
+    
 }
 
 

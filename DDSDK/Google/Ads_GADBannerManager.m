@@ -14,6 +14,7 @@
 @property (nonatomic,assign)BOOL isBannerImmediately;//
 
 @property (nonatomic,assign)NSInteger methods;
+@property (nonatomic,assign)BOOL isShowed;
 
 @end
 
@@ -64,6 +65,19 @@
     [self.bannerView removeFromSuperview];
 }
 
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated {
+    if (!self.isShowed) {
+        [self.currentVC.view addSubview:self.bannerView];
+    }
+}
+
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated {
+    if (self.isShowed) {
+        self.isShowed = NO;
+        [self.bannerView removeFromSuperview];
+    }
+}
+
 #pragma mark - GADBannerViewDelegate
 
 - (void)bannerViewDidReceiveAd:(nonnull GADBannerView *)bannerView {
@@ -73,6 +87,7 @@
         frame.origin = self.point;
         bannerView.frame = frame;
     }
+    self.isShowed = YES;
     if (self.delegate && [self.delegate respondsToSelector:@selector(ads_gadLoadSuccessWithManager:)]) {
         [self.delegate ads_gadLoadSuccessWithManager:self];
     }

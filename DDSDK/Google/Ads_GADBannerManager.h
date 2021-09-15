@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void)ads_closeBannerAdWithUnitID:(NSString *)unitID;
 
+-(void)ads_bannerWillAppearAnimated:(BOOL)animated;
+-(void)ads_bannerWillDisappearAnimated:(BOOL)animated;
+
 @end
 
 NS_ASSUME_NONNULL_END

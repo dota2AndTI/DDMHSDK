@@ -34,6 +34,9 @@
 // 广告素材物料加载成功
 -(void)nativeExpresInterstitialAdDidLoad:(BUNativeExpressInterstitialAd *)interstitialAd {
     NSLog(@"穿山甲 插屏广告加载成功");
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadSuccessWithManager:)]) {
+        [self.delegate ads_buLoadSuccessWithManager:self];
+    }
 }
 // 渲染成功回调
 -(void)nativeExpresInterstitialAdRenderSuccess:(BUNativeExpressInterstitialAd *)interstitialAd {
@@ -48,10 +51,15 @@
 //返回的错误码(error)表示广告加载失败的原因，
 -(void)nativeExpresInterstitialAd:(BUNativeExpressInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
     NSLog(@"穿山甲 插屏广告加载失败->%@",error);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buLoadFailedWithManager:error:)]) {
+        [self.delegate ads_buLoadFailedWithManager:self error:error];
+    }
 }
 
 - (void)nativeExpresInterstitialAdDidClose:(BUNativeExpressInterstitialAd *)interstitialAd {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(ads_buClosedWithManager:)]) {
+        [self.delegate ads_buClosedWithManager:self];
+    }
 }
 
 @end
